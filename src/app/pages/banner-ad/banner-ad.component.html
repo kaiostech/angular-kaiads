@@ -1,0 +1,19 @@
+<div class="banner-container">
+    <div *ngFor="let navItem of navItems; let i=index">
+        <NavItem
+            *ngIf="navItem.name !== 'KaiAd'"
+            [navItem] = "navItem"
+            [styles] = "setStyles(navItem.focus)"
+        >
+        </NavItem>
+    </div>
+    <KaiAd
+        [banner]="true"
+        [focus]="navItems[activeViewItem].name === 'KaiAd'"
+        [focusStyles]="bannerFocusStyles"
+    ></KaiAd>  
+</div>
+<SoftKeys
+    [navItem]="navItems[activeViewItem]"
+>
+</SoftKeys>

@@ -1,0 +1,12 @@
+<div class="DPad-container">
+    <NavItem
+        *ngFor="let navItem of navItems; let i=index"
+        [navItem] = "navItem"
+        [styles] = "setStyles(navItem.focus)"
+    >
+    </NavItem>
+    <SoftKeys
+        [navItem]="navItems[activeViewItem]"
+    >
+    </SoftKeys>
+</div>

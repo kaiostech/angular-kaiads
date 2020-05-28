@@ -1,0 +1,27 @@
+{
+  "name": "angular-kaiads",
+   "version": "0.0.1",
+  "description": "It helps you to integrate kaiads in your angular application",
+  "subtitle": "It helps you to integrate kaiads in your angular application",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/assets/icons/kaios_56.png",
+    "112": "/assets/icons/kaios_112.png"
+  },
+  "theme_color": "#65ACFF",
+  "developer": {
+    "name": "Johnny Ho",
+    "url": ""
+  },
+  "type": "web",
+  "fullscreen": "true",
+  "locales": {
+    "en-US": {
+      "name": "angular-kaiads",
+      "description": "It helps you to integrate kaiads in your angular application",
+      "subtitle": "It helps you to integrate kaiads in your angular application"
+    }
+  },
+  "default_locale": "en-US",
+  "orientation": [ "portrait-primary" ]
+}

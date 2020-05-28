@@ -1,0 +1,43 @@
+<div class="background"></div>
+<div class="dashboard">
+    <div class="dashboard-header">
+        <div class="dashboard-header-wrapper">
+            <span class="dashboard-header-title">Dashboard</span>
+            <span class="dashboard-header-sub">3 item(s)</span>
+        </div>
+        <img alt="icon" class="dashboard-icon" src="assets/icons/kaios_56.png"/>
+    </div>
+    <div class="container">
+        <div class="left-column">
+            <div *ngFor="let navItem of dashboardNavItems; let i=index">
+                <NavItem
+                    *ngIf="i < 3"
+                    [navItem] = "navItem"
+                    [index] = i
+                    [styles]="setStyles(i, navItem.focus)"
+                >
+                </NavItem>
+            </div>
+        </div>
+        <div class="right-column">
+            <div *ngFor="let navItem of dashboardNavItems; let i=index">
+                <NavItem
+                    *ngIf="i >= 3"
+                    [navItem] = "navItem"
+                    [index] = i
+                    [styles]="setStyles(i, navItem.focus)"
+                >
+                </NavItem>
+            </div>
+        </div>
+    </div>
+</div>
+<Menu
+    [title]="'Menu Title'"
+    [navItems]="menuNavItems"
+    [show]="showMenu"
+></Menu>
+<SoftKeys
+    [navItem]="activeView === 'dashboard' ? dashboardNavItems[activeViewItem] : menuNavItems[activeViewItem]"
+>
+</SoftKeys>

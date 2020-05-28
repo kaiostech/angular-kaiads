@@ -1,0 +1,13 @@
+<div class="lock-layer" [ngStyle]="{'display': show ? '' : 'none'}">
+    <div class="fade-in dialog">
+        <div class="menu">
+            <h3 class="menu-title">{{title}}</h3>
+            <NavItem
+                *ngFor="let navItem of navItems; let i=index"
+                [navItem] = "navItem"
+                [styles] = "setStyles(navItem.focus)"
+            >
+            </NavItem>
+        </div>
+    </div>
+</div>
